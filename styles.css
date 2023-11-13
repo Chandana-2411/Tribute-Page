@@ -1,0 +1,441 @@
+
+body {
+	background-color: #111111;
+	min-height: 100%;
+	display: grid;
+	place-items: center;
+	margin: 10px; /* Update to '10px' */
+	padding: 40px; /* Update to '40px' */
+	font-family: 'Martel Sans', sans-serif;
+  }
+  
+  
+	  .img {
+		text-align: center;
+		margin-top: 50px;
+		/* width: 100%;
+		height: 50;
+		display: block;
+		outline: none; */
+	  }
+  
+		  #title {
+		
+			  text-align: center;
+			  text-shadow: 5px 5px 10px rgb(11, 11, 11);
+			  font-size: 7vh;
+		margin-top: 0;
+		color: rgb(8, 7, 7);
+		  }
+  
+	  video {
+	  width: 100%;
+	  height: auto;
+	  display: block;
+	  outline: none; 
+  }
+  
+  
+	/* Hide video controls */
+	video::-webkit-media-controls {
+	  display: none !important;
+  }
+  
+  video::-webkit-media-controls-panel {
+	  display: none !important;
+  }
+  
+  video::-webkit-media-controls-play-button {
+	  display: none !important;
+  }
+  
+  video::-webkit-media-controls-timeline {
+	  display: none !important;
+  }
+  
+  video::-webkit-media-controls-current-time-display {
+	  display: none !important;
+  }
+  
+  video::-webkit-media-controls-time-remaining-display {
+	  display: none !important;
+  }
+  
+  video::-webkit-media-controls-mute-button {
+	  display: none !important;
+  }
+  
+  video::-webkit-media-controls-volume-slider {
+	  display: none !important;
+  }
+  
+		  /* Styling the content of the page like-
+		  padding, font-size, font color etc.*/
+		  /* div#tribute-data {
+			  background-color: rgb(46, 139, 87, 0.25);
+			  box-shadow: 20px 20px 20px #dae6da;
+			  font-family: Georgia;
+			  padding: 25px 25px;
+			  margin: 11px;
+			  margin-top: 50px; 
+		background-image: url('https://wallpapers.com/images/high/athlete-virat-kohli-9nn13isg56b911i7.webp');
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center top;
+		margin: 0;
+		padding: 0;
+		font-family: Arial, sans-serif;
+		color: white;
+		backdrop-filter: blur(10px); 
+		
+		  }
+  
+	  .overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency here */
+	
+  
+		  /* Styling the title of the content */
+		  h1.title-virat {
+			  font-size: 35px;
+			  color: rgb(10, 8, 8);
+			  text-align: center;
+			  text-shadow: 5px 5px 10px black;
+		  }
+  
+	  #main {
+		max-width: 100%;
+		margin: auto;
+		z-index: 1;
+		position: relative;
+		color: white; 
+	}
+  
+	
+	#text-overlay {
+	  position: absolute;
+	  top: 50%; 
+	  /* left: 50%;  */
+	  transform: translate(-50%, -50%);
+	  color: white; /* Text color */
+	  text-align: left;
+	  font-size: 24px; /* Adjust the font size as needed */
+	  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: Add a text shadow for better visibility */
+	  /* margin-top:1 ; */
+	  margin-left:15% ;
+  }   
+  /*  
+  #social-icons {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 1000;
+  }
+  
+  .social-icon {
+	display: inline-block;
+	margin-right: 10px;
+  }
+  
+  .social-icon img {
+	width: 40px; 
+	height: 40px;
+	border-radius: 50%; 
+	border: 2px solid #fff; 
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  .social-icon img:hover {
+	transform: scale(1.2); 
+  } */
+  
+  /* 
+  * {
+	  padding: 50;
+	  margin: 50;
+	  box-sizing: border-box;
+  } */
+  /* body {
+	  min-height: 1;
+	  display: grid;
+	  place-items: center;
+	  margin: 10;
+	  padding: 40;
+	  /* background: linear-gradient(to right, #008000, #00e600, #b3ffb3, #00e600, #008000); */
+	  /* font-family: 'Martel Sans', sans-serif;
+  } */
+   
+  h1 {
+	  font-size: 5.25vmin;
+	  text-align: center;
+	  color: white;
+  }
+  p {
+	  font-size: max(10pt, 2.5vmin);
+	  line-height: 1.4;
+	  color: #0e390e;
+	  margin-bottom: 1.5rem;
+  }
+  
+  .wrap {
+	  display: flex;
+	  flex-wrap: nowrap;
+	  justify-content: space-between;
+	  width:100%; /* Adjust the width as needed */
+	  height:50%;
+	  margin: 2rem auto;
+	  border: 8px solid;
+	  border-image: linear-gradient(-50deg, rgb(240, 243, 240), #f4f7f4, rgb(245, 247, 245), rgb(248, 249, 248), rgb(237, 239, 237), #eaecea, rgb(249, 251, 249)) 1;
+	  transition: .3s ease-in-out;
+	  position: relative;
+	  overflow: hidden;
+  }
+  .overlay {
+	  position: relative;
+	  display:flex;
+	  width: 100%;
+	  height: 100%;
+	  padding: 1rem .75rem;
+	  background: #0c0d0c;
+	  transition: .4s ease-in-out;
+	  z-index: 1;
+  }
+  .overlay-content {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: space-between;
+	  width: 15vmin;
+	  height: 100%;                                  
+	 padding: .5rem 0 0 .5rem;
+	  border: 3px solid;
+	  border-image: 
+		  linear-gradient(
+			to bottom, 
+			#f9f9f8 5%,
+			rgb(165, 83, 189) 35% 65%,
+			rgba(222, 3, 178, 0.658) 95%
+		  ) 0 0 0 100%;
+	  transition: .3s ease-in-out .2s;
+	  z-index: 1;
+  }
+  
+  
+  
+  /* .image-content {
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  width: 60vmin;
+	  height: 100%;
+	  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0QHSC0VQBPK51CHHD9R37Y6tW7SrrvESm-Q&usqp=CAU");
+	  background-size: cover;
+	  transition: .3s ease-in-out;
+	  
+  } */
+  
+  .image-content table {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0
+  }
+  
+  
+  .card1 .image-content {
+	position: absolute;
+	  top: 0;
+	  right: 0;
+	  width: 60vmin;
+	  height: 100%;
+	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0QHSC0VQBPK51CHHD9R37Y6tW7SrrvESm-Q&usqp=CAU");
+	background-size: cover;
+	  transition: .3s ease-in-out;
+  }
+  
+  .card2 .image-content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60vmin;
+	height: 100%;
+	background-image: url("https://i.pinimg.com/474x/01/65/51/016551ba56d0f5de02d6e0001a459e50.jpg");
+	background-size: cover;
+	transition: .3s ease-in-out;
+	overflow: hidden;
+	}
+  
+	  .card2 .text{
+	  width: 55%; /* Make the table fill the entire width of the container */
+	  /* /* height: 90%; */
+	  overflow-y: scroll; 
+	  }
+    
+	
+	.card3 .image-content {
+	position: absolute;
+	  top: 0;
+	  right: 0;
+	  width: 60vmin;
+	  height: 100%;
+	background-image: url("https://i.pinimg.com/474x/77/5d/9a/775d9a2899d2ba4ed11a7d3bd9180579.jpg");
+	background-size: cover;
+	  transition: .3s ease-in-out;
+  }
+  
+  .inset {
+	  max-width: 40%;
+	  margin: 0.25em 1em 1em 0;
+	  border-radius: 0.25em;
+	  float: left;
+  }
+  
+  .dots {
+	  position: absolute;
+	  bottom: 1rem;
+	  right: 2rem;
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: space-around;
+	  align-items: center;
+	  width: 55px;
+	  height: 4vmin;
+	  transition: .3s ease-in-out .3s;
+  }
+  .dot {
+	  width: 14px;
+	  height: 14px;
+	  background: rgb(16, 16, 14);
+	  border: 1px solid indigo;
+	  border-radius: 50%;
+	  transition: .3s ease-in-out .3s;
+  }
+  
+  .text {
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  width: 60vmin;
+	  height: 100%;
+	  padding: 0vmin 0vmin;
+	  background: #fff;
+	  box-shadow: inset 1px 1px 15px 0 rgba(0 0 0 / .4);
+	  overflow-y: scroll;
+  }
+  
+  
+  .wrap:hover .overlay
+   {
+	  transform: translateX(-60vmin);
+  }
+  .wrap:hover .image-content {
+	  width: 30vmin;
+  }
+  .wrap:hover .overlay-content {
+	  border: none;
+	  transition-delay: .2s;
+	  transform: translateX(60vmin);
+  }
+  .wrap:hover .dots {
+	  transform: translateX(1rem);
+  }
+  .wrap:hover .dots .dot {
+	  background: white;
+  }
+  
+  
+  /* Animations and timing delays */
+  .animate {
+	animation-duration: 0.7s;
+	animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+	animation-fill-mode: backwards;
+  }
+  /* Pop In */
+  .pop { animation-name: pop; }
+  @keyframes pop {
+	0% {
+	  opacity: 0;
+	  transform: scale(0.5, 0.5);
+	}
+	100% {
+	  opacity: 1;
+	  transform: scale(1, 1);
+	}
+  }
+  
+  /* Slide In */
+  .slide { animation-name: slide; }
+  @keyframes slide {
+	0% {
+	  opacity: 0;
+	  transform: translate(4em, 0);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translate(0, 0);
+	}
+  }
+  
+  /* Slide Left */
+  .slide-left { animation-name: slide-left; }
+  @keyframes slide-left {
+	0% {
+	  opacity: 0;
+	  transform: translate(-40px, 0);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translate(0, 0);
+	}
+  }
+  
+  .slide-up {animation-name: slide-up;}
+  @keyframes slide-up {
+	  0% {
+		  opacity: 0;
+		  transform: translateY(3em);
+	  }
+	  100% {
+		  opacity: 1;
+		  transform: translateY(0);
+	  }
+  }
+  
+  .delay-1 {
+	animation-delay: 0.3s;
+  }
+  .delay-2 {
+	animation-delay: 0.6s;
+  }
+  .delay-3 {
+	animation-delay: 0.9s;
+  }
+  .delay-4 {
+	animation-delay: 1.2s;
+  }
+  .delay-5 {
+	animation-delay: 1.5s;
+  }
+  .delay-6 {
+	animation-delay: 1.8s;
+  }
+  .delay-7 {
+	animation-delay: 2.1s;
+  }
+  .delay-8 {
+	animation-delay: 2.4s;
+  }
+  
+  .my-list {
+	/* list-style-type: none; */
+	padding: 0;
+  }
+  
+  .my-list li {
+	text-align: left;
+  }
+
+  
